@@ -9,7 +9,6 @@ logging.basicConfig(
     level=logging.INFO)
 logging.info('Inicio de la ejecución')
 
-
 #print(os.getenv('HOST'))
 #print(f"Parametros: {sys.argv}")
 
@@ -39,46 +38,6 @@ print(argumentos)
 # Ejecutar un script
 #subprocess.run(f"bash ./scripts/{args.script_name}.sh", shell=True)
 #subprocess.run(f"bash ./scripts/{args.script_name}.sh {args.args}", shell=True)
-
-"""
-client = paramiko.SSHClient()
-client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-print(os.getenv('HOST'))
-print(os.getenv('REMOTE_USER'))
-print(os.getenv('PORT'))
-
-try:
-    client.connect(
-        hostname=os.getenv('HOST'),
-        username=os.getenv('REMOTE_USER'),
-        port=os.getenv('PORT')
-    )
-
-    # Templates
-
-    env = Environment(loader=FileSystemLoader('scripts'))
-    template = env.get_template(f"{args.script_name}.sh")
-    template_output = template.render(args.args)
-
-    print(template_output)
-
-    client.exec_command(template_output)
-
-except Exception as e:
-    print(f"Error: {e}")
-finally:
-    # Cerrar la conexión
-    client.close()
-"""
-    
-"""
-logging.basicConfig(
-    filename='dev.log',
-    level=logging.INFO)
-logging.info('This is an info message')
-logging.error('This is an error message')
-"""
 
 executor = Executor(args.script_name, argumentos)
 executor.execute()
