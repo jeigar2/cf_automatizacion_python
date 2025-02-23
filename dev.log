@@ -1,0 +1,23 @@
+INFO:root:Inicio de la ejecución
+INFO:root:Argumentos: {'file_name': 'README.txt'}
+INFO:root:Conexion SSH
+INFO:root:cargando variables de entorno fichero .env
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.2p1)
+INFO:paramiko.transport:Authentication (publickey) successful!
+INFO:root:Conexion establecida
+INFO:root:Template: #touch $1
+touch README.txt
+INFO:root:Comando ejecutado
+INFO:root:Conexion cerrada
+INFO:root:Fin de la ejecución
+INFO:root:Inicio de la ejecución
+INFO:root:Argumentos: {'file_name': 'SnakE', 'version': '2', 'pin': 'TR3S'}
+INFO:root:Conexion SSH
+INFO:root:cargando variables de entorno fichero .env
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_8.2p1)
+INFO:paramiko.transport:Authentication (publickey) successful!
+INFO:root:Conexion establecida
+INFO:root:Template: echo "Instalando SnakE v.2; codigo TR3S" >> output.log
+INFO:root:Comando ejecutado
+INFO:root:Conexion cerrada
+INFO:root:Fin de la ejecución
